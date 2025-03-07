@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switchable Tabs</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            background-color: #ff00ff;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .tab {
+            flex: 1;
+            padding: 15px 20px;
+            cursor: pointer;
+            background-color: #ff00ff;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .tab.active {
+            background-color: #00ff00;
+            color: #000;
+        }
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 60px;
+            padding-top: 10px;
+        }
+        .tab-content {
+            display: none;
+            text-align: center;
+            width: 100%;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .match-card {
+            background-color: rgba(255, 0, 255, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: left;
+            width: 90%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        .match-details {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        .join-btn {
+            background-color: #00ff00;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            align-self: center;
+        }
+    </style>
+    <script>
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`#${tabName}`).classList.add('active');
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`[data-tab='${tabName}']`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="tab active" data-tab="matches" onclick="switchTab('matches')">Matches</div>
+        <div class="tab" data-tab="joined" onclick="switchTab('joined')">Joined</div>
+    </div>
+    <div class="content">
+        <div id="matches" class="tab-content active">
+            <h3>Matches</h3>
+            <div class="match-card">
+                <h4>Match Name</h4>
+                <div class="match-details"><span>Players:</span><span>1/10</span></div>
+                <div class="match-details"><span>Entry:</span><span>$5</span></div>
+                <div class="match-details"><span>Prize:</span><span>$50</span></div>
+                <button class="join-btn">Join</button>
+            </div>
+        </div>
+        <div id="joined" class="tab-content">
+            <h3>Joined</h3>
+            <p>List of joined events goes here...</p>
+        </div>
+    </div>
+</body>
+</html>

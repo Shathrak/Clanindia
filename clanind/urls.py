@@ -1,8 +1,12 @@
-from django.contrib import admin
+# example/urls.py
 from django.urls import path
-from . import views
+
+from .views import *
+
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    
+   # path('', g_choice),
+    #path('', match),
+    path('profile/', profile),
+    path('', login )
 ]

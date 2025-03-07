@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Profile</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ff00ff;
+            background-color: rgba(128, 0, 128, 0.8);
+            color: #00ff00;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #ff00ff;
+        }
+        .btn {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-change {
+            background-color: #00ff00;
+            color: #000;
+        }
+        .btn-withdraw {
+            background-color: #ff00ff;
+            color: #fff;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="data:image/jpeg;base64,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   " alt="Profile Picture" class="profile-pic">
+        <br>
+        <button class="btn btn-change">Change Profile Pic</button>
+        <h2>John Doe</h2>
+        <p>johndoe@gmail.com</p>
+    </div>
+    <div class="container">
+        <h3>Winnings</h3>
+        <p>$500</p>
+        <button class="btn btn-withdraw">Withdraw</button>
+    </div>
+    <div class="container">
+        <h3>Match Statistics</h3>
+        <div class="stats">
+            <div><strong>Kills:</strong> 120</div>
+            <div><strong>Wins:</strong> 30</div>
+            <div><strong>Matches:</strong> 50</div>
+        </div>
+    </div>
+</body>
+</html>

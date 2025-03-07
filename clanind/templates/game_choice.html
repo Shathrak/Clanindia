@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .game-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            border: 2px solid #0ff;
+            background: linear-gradient(45deg, #8a2be2, #00ff00);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
+            width: 80%;
+            max-width: 300px;
+        }
+        .game-button:hover {
+            transform: scale(1.1);
+        }
+        .game-button img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+    </style>
+</head> 
+<body>
+    <div class="button-container">
+        <button class="game-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/63/Battleground_Mobile_India.webp" alt="BGMI">
+            BGMI
+        </button>
+        <button class="game-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Logo_of_Garena_Free_Fire.png/1200px-Logo_of_Garena_Free_Fire.png" alt="Free Fire">
+            Free Fire
+        </button>
+        <button class="game-button">
+            <img src="https://i.pinimg.com/originals/ce/1a/3b/ce1a3b0ad90aa7ccd1c51589991eaa39.png  " alt="Call of Duty">
+            Call of Duty
+        </button>
+    </div>
+</body>
+</html>

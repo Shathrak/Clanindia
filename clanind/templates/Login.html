@@ -1,0 +1,42 @@
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign-In</title>
+    <style>
+        body {
+            background: url('https://i.pinimg.com/736x/b8/ac/7e/b8ac7e9722542ad9f0586637bfbd6f8a.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        .google-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4285F4;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <a class="google-btn" href="{% provider_login_url 'google' %}">Sign in with Google</a>
+    </div>
+</body>
+</html>

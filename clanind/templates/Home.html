@@ -3,53 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to ClanIndia Esport</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Clan India - Welcome</title>
     <style>
-        /* Basic reset */
-        body, html {
+        /* Set the game background image */
+        body {
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Set background image for the entire page */
-        body {
-            background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapers.com%2Fbest-gaming-background&psig=AOvVaw1GamkXWlwyPzqR26yKo4I7&ust=1739948325577000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJih5dnSzIsDFQAAAAAdAAAAABAT'); /* Replace with your image URL */
+            height: 100vh;
+            background-image: url('https://assets.gqindia.com/photos/645c750df0141edcb0cc1771/16:9/w_1920,c_limit/100-best-games-hp-b.jpg'); /* Replace with your image URL */
             background-size: cover;
-            background-position: center;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-position: center center;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
             color: white;
         }
 
-        /* Center the content div */
-        .content {
+        /* Center the text on the page */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
             text-align: center;
-            padding: 40px;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 20px;
         }
 
-        /* Heading text styling */
-        .welcome-text {
-            font-size: 48px;
-            font-weight: bold;
+        h1 {
+            font-size: 3rem;
             margin: 0;
+            padding: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Add some hover effect for interactivity */
+        .btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f50057;
         }
     </style>
 </head>
 <body>
-
-    <div class="content">
-        <div class="welcome-text">
-            Welcome to ClanIndia Esport
+    <div class="container">
+        <div>
+            <h1>Welcome to Clan India Esports!</h1>
+            <p>Your gateway to competitive gaming excellence.</p>
+            <button class="btn" onclick="window.location.href='#'">Join Us Now</button>
         </div>
-        <div> Coming Soon  </div>
     </div>
-
 </body>
 </html>
